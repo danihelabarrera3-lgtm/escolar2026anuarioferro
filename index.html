@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuario Escolar | Eugenio Ferro Falla</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-mark">✦</span>
+            <div>
+                <strong>Anuario escolar</strong>
+                <small>Institución Educativa Eugenio Ferro Falla</small>
+            </div>
+        </div>
+
+        <button class="button button-light" id="helpButton">
+            ¿Cómo se usa?
+        </button>
+    </header>
+
+    <main class="app-shell">
+
+        <section class="intro">
+            <div>
+                <p class="eyebrow">NUESTRA HISTORIA · NUESTROS RECUERDOS</p>
+                <h1>Un libro lleno de <em>momentos</em></h1>
+                <p class="intro-copy">
+                    Un espacio para conservar las personas, sueños y recuerdos
+                    que hicieron especial esta etapa.
+                </p>
+            </div>
+
+            <div class="intro-stamp">PROM<br>2026</div>
+        </section>
+
+        <section class="workspace">
+
+            <aside class="tools-panel">
+                <p class="panel-kicker">HERRAMIENTAS</p>
+                <h2>Tu anuario</h2>
+
+                <p class="panel-description">
+                    Edita cada ficha y guarda una copia para conservar tu trabajo.
+                </p>
+
+                <div class="save-controls">
+                    <button class="button button-primary" id="saveBookButton">
+                        💾 Guardar anuario
+                    </button>
+
+                    <button class="button button-secondary" id="loadBookButton">
+                        📂 Cargar anuario
+                    </button>
+
+                    <input
+                        type="file"
+                        id="loadBookInput"
+                        accept=".json,application/json"
+                        hidden
+                    >
+
+                    <p id="saveStatus" class="save-note">
+                        Los cambios se guardan automáticamente en este dispositivo.
+                    </p>
+                </div>
+
+                <div class="tool-divider"></div>
+
+                <button class="button button-secondary full-button" id="editModeButton">
+                    ✏️ Activar edición
+                </button>
+
+                <button class="button button-danger full-button" id="resetButton">
+                    Restablecer anuario
+                </button>
+
+                <p class="privacy-note">
+                    Guarda copias de seguridad en tu computador y evita compartir
+                    fotografías o datos personales sin autorización.
+                </p>
+            </aside>
+
+            <section class="reader">
+
+                <div class="book-stage">
+                    <div class="book" id="book"></div>
+                </div>
+
+                <nav class="book-navigation">
+
+                    <button class="nav-button" id="prevButton">
+                        ← Anterior
+                    </button>
+
+                    <div class="page-progress">
+                        <strong id="pageCounter">1 / 30</strong>
+
+                        <div class="progress-track">
+                            <span id="progressBar"></span>
+                        </div>
+                    </div>
+
+                    <button class="nav-button nav-next" id="nextButton">
+                        Siguiente →
+                    </button>
+
+                </nav>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        ANUARIO ESCOLAR · CIENCIA · VIRTUD · AMISTAD
+    </footer>
+
+    <dialog id="helpDialog" class="help-dialog">
+
+        <div class="dialog-heading">
+            <div>
+                <p class="eyebrow">GUÍA RÁPIDA</p>
+                <h2>¿Cómo se usa?</h2>
+            </div>
+
+            <button class="dialog-close" id="closeHelp">×</button>
+        </div>
+
+        <ol>
+            <li>Utiliza los botones para pasar las páginas.</li>
+            <li>Activa el modo de edición para modificar los textos.</li>
+            <li>Agrega fotografías a cada estudiante.</li>
+            <li>Dibuja o sube una imagen de tu firma.</li>
+            <li>Los cambios se guardan automáticamente en este navegador.</li>
+            <li>Usa Guardar anuario para descargar una copia de seguridad.</li>
+            <li>Usa Cargar anuario para recuperar una copia anterior.</li>
+        </ol>
+
+        <p class="dialog-footnote">
+            Recuerda guardar una copia de seguridad periódicamente.
+        </p>
+
+    </dialog>
+    
+</body>
+</html>
